@@ -1,0 +1,30 @@
+GET http://localhost:4100/api/todos
+
+###
+
+GET http://localhost:4100/api/todos/
+
+###
+
+POST http://localhost:4100/api/todos
+Content-Type: application/json
+
+{
+  "title": "Buy Milk",
+  "completed": false
+}
+
+###
+
+PATCH http://localhost:4100/api/todos/5d16a0f30fa3982651fde0da
+Content-Type: application/json
+
+{
+  "title": "Buy Milk Today",
+  "completed": true
+}
+
+###
+
+DELETE http://localhost:4100/api/todos/5d16a0f30fa3982651fde0da
+

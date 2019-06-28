@@ -23,6 +23,10 @@ app.use(`/api/${process.env.SUBSCRIBERS_DB}`, subscribersRouter)
 const samplesRouter = require('./routes/samples')
 app.use(`/api/${process.env.SAMPLES_DB}`, samplesRouter)
 
+// Routing for Todos
+const todosRouter = require('./routes/todos')
+app.use(`/api/${process.env.TODOS_DB}`, todosRouter)
+
 
 app.listen(process.env.SERVER_PORT, () => {
   console.log(`Server started on port ${process.env.SERVER_PORT}`)
