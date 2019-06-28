@@ -3,21 +3,23 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-mongoose.connect(`${process.env.DB_CONNECT_URL}/${process.env.DB_NAME}`, { useNewUrlParser: true })
+mongoose.connect(`${process.env.DB_CONNECT_URL}${process.env.DB_NAME}`, { useNewUrlParser: true })
 
 const db = mongoose.connection
 db.on('error', (error) => {
   console.error(error)
 })
 db.once('open', () => {
-  console.log(`Connected to "${process.env.DB_NAME}" Database`)
+  console.log(`Connected to API Databases`)
 })
 
 app.use(express.json())
 
+// Routing for Subscribers
 const subscribersRouter = require('./routes/subscribers')
-app.use('/subscribers', subscribersRouter)
+app.use(`/api/${process.env.SUBSCRIBERS_DB}`, subscribersRouter)
 
-app.listen(3000, () => {
+
+app.listen(process.env.SERVER_PORT, () => {
   console.log(`Server started on port ${process.env.SERVER_PORT}`)
 })
