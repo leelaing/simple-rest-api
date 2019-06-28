@@ -2,7 +2,7 @@ GET http://localhost:4100/api/subscribers
 
 ###
 
-GET http://localhost:4100/api/subscribers/5d1639f9d4099a17df2a7d61
+GET http://localhost:4100/api/subscribers/5d1674794e40da22b598a87a
 
 ###
 
@@ -10,21 +10,21 @@ POST http://localhost:4100/api/subscribers
 Content-Type: application/json
 
 {
-  "name": "Lee Laing",
-  "subscribedToChannel": "Battle for my Heart Channel"
+  "name": "Travis Charles Gentry",
+  "subscribedToChannel": "Travis Gentry's Channel"
 }
 
 ###
 
-PATCH http://localhost:4100/api/subscribers/5d166abd4d47d020b3b3939b
+PATCH http://localhost:4100/api/subscribers/5d1674794e40da22b598a87a
 Content-Type: application/json
 
 {
-  "name": "Lee Charles Laing",
+  "name": "Travis Charles Gentry",
   "subscribedToChannel": "Battle for my Heart Youtube Channel"
 }
 
 ###
 
-DELETE http://localhost:4100/api/subscribers/5d166ac94d47d020b3b3939c
+DELETE http://localhost:4100/api/subscribers/5d1674794e40da22b598a87a
 
