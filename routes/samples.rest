@@ -1,0 +1,30 @@
+GET http://localhost:4100/api/samples
+
+###
+
+GET http://localhost:4100/api/samples/
+
+###
+
+POST http://localhost:4100/api/samples
+Content-Type: application/json
+
+{
+  "name": "Lee Laing",
+  "subscribedToChannel": "Battle for my Heart Channel"
+}
+
+###
+
+PATCH http://localhost:4100/api/samples/5d167c2558f9cd23e0c4b458
+Content-Type: application/json
+
+{
+  "name": "Lee Charles Laing",
+  "subscribedToChannel": "Battle for my Heart Youtube Channel"
+}
+
+###
+
+DELETE http://localhost:4100/api/samples/5d167c2558f9cd23e0c4b458
+
