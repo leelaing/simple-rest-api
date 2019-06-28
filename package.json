@@ -6,7 +6,7 @@
   "scripts": {
     "devStart": "nodemon server.js"
   },
-  "repository": "http://",
+  "repository": "https://github.com/leelaing/simple-rest-api",
   "author": "Lee Laing <big2tiny@gmail.com>",
   "license": "MIT",
   "dependencies": {
